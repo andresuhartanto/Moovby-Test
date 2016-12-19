@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +21,47 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4D-cf-CfW">
+                                <rect key="frame" x="16" y="316" width="343" height="35.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWX-hB-YOU">
+                                <rect key="frame" x="168" y="359" width="38.5" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtI-kY-eVp">
+                                <rect key="frame" x="143" y="617" width="88" height="30"/>
+                                <state key="normal" title="Refresh Now"/>
+                                <connections>
+                                    <action selector="onRefreshButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aq3-a1-pSw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mtI-kY-eVp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GA5-JJ-Hyi"/>
+                            <constraint firstItem="P4D-cf-CfW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="H2U-bW-0MY"/>
+                            <constraint firstItem="P4D-cf-CfW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Q3c-bw-fjx"/>
+                            <constraint firstItem="aWX-hB-YOU" firstAttribute="top" secondItem="P4D-cf-CfW" secondAttribute="bottom" constant="8" id="Ui3-st-ML0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mtI-kY-eVp" secondAttribute="bottom" constant="20" id="VgP-ys-JXE"/>
+                            <constraint firstItem="P4D-cf-CfW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eS3-fE-1iQ"/>
+                            <constraint firstItem="P4D-cf-CfW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lqZ-g7-Fdi"/>
+                            <constraint firstItem="aWX-hB-YOU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rWy-5N-I2b"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timeLabel" destination="P4D-cf-CfW" id="Byw-XD-GrN"/>
+                        <outlet property="timerLabel" destination="aWX-hB-YOU" id="7x6-Y5-MMF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>
